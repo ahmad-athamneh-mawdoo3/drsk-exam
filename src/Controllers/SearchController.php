@@ -1,11 +1,11 @@
 <?php
 
-namespace mawdoo3\test\Controllers;
+namespace mawdoo3\drsk\exam\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use \mawdoo3\test\Models\SavedResult;
-
+use \mawdoo3\drsk\exam\Models\SavedResult;
+use mawdoo3\drsk\exam\Auth;
 class SearchController extends Controller
 {
     /**
@@ -134,7 +134,6 @@ class SearchController extends Controller
      */
     public function testRoute(Request $request)
     {
-        dd($request->all());
-        return ; 
+        return Auth::isAuthed('ahmad');
     }
 }

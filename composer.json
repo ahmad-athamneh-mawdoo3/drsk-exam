@@ -1,9 +1,10 @@
 {
     "name": "mawdoo3/drsk.exam",
-    "type": "project",
-    "description": "Mawdoo3 drsk Task.",
+    "type": "library",
+    "description": "Mawdoo3 drsk Exam.",
     "keywords": [
         "Darsk",
+        "Exam",
         "e-learning"
     ],
     "license": "MIT",
@@ -30,7 +31,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "mawdoo3\\test\\TestServiceProvider"
+                "mawdoo3\\drsk\\exam\\DrskExamServiceProvider"
             ],
             "dont-discover": []
         }
@@ -38,7 +39,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "mawdoo3\\test\\": "src/"
+            "mawdoo3\\drsk\\exam\\": "src/"
         }
     },
     "autoload-dev": {
@@ -55,11 +56,11 @@
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "@php artisan vendor:publish --provider='mawdoo3\\test\\TestServiceProvider'"
+            "@php artisan vendor:publish --provider='mawdoo3\\drsk\\exam\\DrskExamServiceProvider'"
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
-            "@php artisan vendor:publish --provider='mawdoo3\\test\\TestServiceProvider'"
+            "@php artisan vendor:publish --provider='mawdoo3\\drsk\\exam\\DrskExamServiceProvider'"
         ]
     }
 }
