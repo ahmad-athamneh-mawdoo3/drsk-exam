@@ -6,6 +6,6 @@ class Auth
 {
     public static function isAuthed($user = null)
     {
-        return isset($user) && !is_null($user) ? "$user logged in" : 'not logged';
+        return isset($user) && !is_null($user) ? "$user logged in from exam" : 'not logged in exam';
     }
 }

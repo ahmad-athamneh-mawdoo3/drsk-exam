@@ -17,7 +17,7 @@ class ExamInstall extends Command
      *
      * @var string
      */
-    protected $description = 'initial install of drsk Core';
+    protected $description = 'initial install of drsk Exam';
 
     /**
      * Create a new command instance.
@@ -36,9 +36,9 @@ class ExamInstall extends Command
      */
     public function handle()
     {
-        exec("php artisan vendor:publish --provider='mawdoo3\drsk\core\DrskCoreServiceProvider'");
+        exec("php artisan vendor:publish --provider='mawdoo3\drsk\exam\DrskExamServiceProvider'");
         $this->line("<info>Publishing:</info> Publishing Configration Done");
-        exec("php artisan migrate --path=/database/migrations/CoreInstall");
+        exec("php artisan migrate --path=/database/migrations/ExamInstall");
         $this->line("<info>Migrating:</info> Migrating to DB Done");
         $this->line(PHP_EOL."<info>All Done !!</info>");
     }
