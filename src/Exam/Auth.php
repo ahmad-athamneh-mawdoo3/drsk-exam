@@ -1,5 +1,5 @@
 <?php
-namespace mawdoo3\drsk\exam;
+namespace Mawdoo3\Drsk\Exam;
 
 
 class Auth  

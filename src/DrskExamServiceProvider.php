@@ -1,8 +1,8 @@
 <?php
-namespace mawdoo3\drsk\exam;
+namespace Mawdoo3\Drsk\Exam;
 
 use Illuminate\Support\ServiceProvider;
-use mawdoo3\drsk\exam\ExamInstall;
+use Mawdoo3\Drsk\Exam\ExamInstall;
 
 class DrskExamServiceProvider extends ServiceProvider
 {

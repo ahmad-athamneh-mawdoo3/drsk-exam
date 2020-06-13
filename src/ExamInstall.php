@@ -1,5 +1,5 @@
 <?php
-namespace mawdoo3\drsk\exam;
+namespace Mawdoo3\Drsk\Exam;
 
 use Illuminate\Console\Command;
 
@@ -36,7 +36,7 @@ class ExamInstall extends Command
      */
     public function handle()
     {
-        exec("php artisan vendor:publish --provider='mawdoo3\drsk\exam\DrskExamServiceProvider'");
+        exec("php artisan vendor:publish --provider='Mawdoo3\Drsk\Exam\DrskExamServiceProvider'");
         $this->line("<info>Publishing:</info> Publishing Configration Done");
         exec("php artisan migrate --path=/database/migrations/ExamInstall");
         $this->line("<info>Migrating:</info> Migrating to DB Done");
